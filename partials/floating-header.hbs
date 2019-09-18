@@ -4,7 +4,11 @@
 		<!-- Title/Logo -->
 		<div class="title-logo">
 			<div class="about">
-				<div class="title"><a href="/">{{@blog.title}}</a></div>
+				<div class="title">
+					<a href="/">
+						<img alt="{{@blog.title}}" src="{{@blog.logo}}">
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -20,7 +24,7 @@
 
 		<!-- Search -->
 		<div onclick="toggleSearch()" class="search">
-			{{> "icons/search"}}	
+			{{> "icons/search"}}
 		</div>
 
 		{{#if @blog.navigation}}
