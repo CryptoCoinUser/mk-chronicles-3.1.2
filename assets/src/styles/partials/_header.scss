@@ -290,3 +290,20 @@
         width: 70vw;
     }
 }
+
+
+img.mkLogo {
+    width: 69px;
+}
+
+@media (min-width: 768px) {
+    img.mkLogo {
+        width: 94px;
+    }
+}
+
+@media (min-width: 992px) {
+    img.mkLogo {
+        width: 134px;
+    }
+}
