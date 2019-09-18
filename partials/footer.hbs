@@ -1,0 +1,76 @@
+<div class="site-footer">
+    <div class="wrapper-1000">
+        {{!-- Footer Top. Uncomment to add footer links etc. 
+
+        <!-- Footer top section -->
+        <div class="footer-top">
+            <!-- Logo/Title -->
+            {{#if @blog.logo}}
+                <div class="logo">
+                    <a target="_blank" href="{{@blog.url}}">
+                        <img alt="{{@blog.title}}" src="{{@blog.logo}}">
+                    </a>
+                </div>
+            {{else}}
+                <div class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></div>
+            {{/if}}
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <div class="column">
+                    <a target="_blank" href="/">Products</a>
+                    <a target="_blank" href="/">Services</a>
+                    <a target="_blank" href="/">Solutions</a>
+                </div>
+                <div class="column">
+                    <a href="/" target="_blank">About</a>
+                    <a href="" target="_blank">Press & Media</a>
+                    <a href="" target="_blank">Partners</a>
+                </div>
+                <div class="column">
+                    <a href="/" target="_blank">Locate Us</a>
+                    <a href="/" target="_blank">Privacy Policy</a>
+                    <a href="/" target="_blank">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+
+        --}}
+
+        <!-- Footer bottom section -->
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <!-- Copyright -->
+                <div class="copyright">
+                    &copy; {{date format="YYYY"}} {{@blog.title}} &middot; All Right Reserved &middot; Published with <a href="https://ghost.org">Ghost</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="social-icons">
+                    {{#if @blog.twitter}}
+                        <!-- Twitter -->
+                        <a href="{{twitter_url}}" class="" target="_blank">
+                            {{> "icons/twitter"}}
+                        </a>
+                    {{/if}}
+                    
+                    {{#if @blog.facebook}}
+                        <!-- Facebook -->
+                        <a href="{{facebook_url}}" class="" target="_blank">
+                            {{> "icons/facebook"}}
+                        </a>
+                    {{/if}}
+                    
+                    <!-- RSS -->
+                    <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank">
+                        {{> "icons/rss"}}
+                    </a>
+                </div>
+
+                <!-- Attribution -->
+                {{!-- {{> "attribution"}} --}}
+            </div>
+        </div>
+    </div>
+</div>

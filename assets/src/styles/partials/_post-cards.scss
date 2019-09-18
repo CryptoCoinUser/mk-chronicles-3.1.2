@@ -1,0 +1,218 @@
+.post-card {
+    // visibility: hidden;
+    margin: 15px 0;
+    .post-card-wrapper {
+        overflow: hidden;
+        height: 100%;
+        margin: 0 15px;
+    }
+    &.no-image {
+        .post-card-image,
+        .post-card-image-h {
+            display: none;
+        }
+    }
+    .post-card-image {
+        border-radius: 0px;
+        width: 100%;
+        height: 250px;
+        background: #c5d2d9 no-repeat 50%;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    .content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .title {
+        font-size: 21px;
+        line-height: 31px;
+        margin-bottom: 10px;
+        font-family: $baskerville;
+        margin: 0px 0px 10px;
+        opacity: 0.78;
+        a {
+            color: $color-text;
+            &:hover {
+                color: $color-text;
+            }
+        }
+    }
+    .excerpt {
+        font-style: italic;
+        font-family: $lato;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 21px;
+        color: $color-text;
+        opacity: 0.78;
+        flex: 1;
+    }
+    .post-card-tags {
+        margin: 0px 0px 12px;
+        a {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: $color-primary;
+        }
+    }
+    .author-and-date {
+        margin: 0px 0px 10px;
+        font-size: 14px;
+    }
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .read-button {
+        margin: 0px 0px 10px;
+    }
+    .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .author {
+            display: flex;
+            align-items: center;
+            &:hover {
+                .name {
+                    color: $color-primary;
+                }
+            }
+            .avatar {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+                display: none;
+            }
+            .name {
+                font-size: 14px;
+                opacity: 0.6;
+                color: $color-text;
+            }
+        }
+        .reading-time {
+            font-size: 14px;
+            opacity: 0.6;
+            text-align: right;
+        }
+    }
+}
+
+.post-feed {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    .large {
+        width: 100%;
+        min-height: 500px;
+        .post-card-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        a.image-container-link {
+            width: 60%;
+            height: 100%;
+        }
+        .post-card-image {
+            height: 100%;
+        }
+        .content {
+            width: 40%;
+            padding: 30px;
+            .title {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+    .medium {
+        width: 50%;
+    }
+    .small {
+        width: 33.33333%;
+        .post-card-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .content {
+            flex: 1;
+        }
+    }
+    .small.no-image {
+        .content {
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .post-feed {
+        .small {
+            width: 50%;
+        }
+        .large {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .post-feed {
+        margin: 0 -15px;
+        .large {
+            width: 100%;
+            display: block;
+            .post-card-wrapper {
+                display: block;
+            }
+            .post-card-image {
+                width: 100%;
+                height: auto;
+            }
+            .content {
+                width: 100%;
+                padding: 20px 15px 27px;
+            }
+            padding: 0;
+        }
+        .medium {
+            width: 100%;
+        }
+        .small {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .post-card {
+        margin: 0;
+        .post-card-wrapper {
+            margin: 0;
+        }
+        .post-card-image {
+            height: auto;
+        }
+        .content {
+            padding: 20px 15px 27px;
+        }
+        .title {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        &.large .title {
+            font-size: 20px !important;
+            line-height: 25px !important;
+        }
+        .excerpt {
+            line-height: 23px;
+        }
+    }
+}

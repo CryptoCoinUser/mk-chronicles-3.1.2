@@ -1,0 +1,42 @@
+<div class="large post-card {{#unless feature_image}} no-image{{/unless}}">
+    <div class="post-card-wrapper">
+        <a class="image-container-link" href="{{url}}">
+            <img class="post-card-image"
+                srcset="{{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w,
+                        {{img_url feature_image size="xl"}} 2000w"
+                sizes="(max-width: 1000px) 400px, 700px"
+                src="{{img_url feature_image size="m"}}"
+                alt="{{title}}"
+            />
+        </a>
+        <div class="content">
+            {{#if primary_tag}}
+            <div class="post-card-tags">
+                <a href="/blog/tag/{{primary_tag.slug}}">{{primary_tag.name}}</a>
+            </div>
+            {{/if}}
+            <div class="title"><a href="{{url}}">{{title}}</a></div>
+            <div class="excerpt">{{excerpt words="33"}}</div>
+            <div class="meta">
+                <div class="authors">
+                {{#foreach authors}}
+                    {{#if @first}}
+                        <a href="{{url}}" class="author">
+                            <div class="avatar">
+                                <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                            </div>
+                            <div class="name">by {{name}}</div>
+                        </a>
+                    {{/if}}
+                {{/foreach}}
+                </div>
+
+                <div class="extras">
+                    <div class="reading-time">{{reading_time}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

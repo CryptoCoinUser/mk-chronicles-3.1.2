@@ -1,0 +1,47 @@
+<div class="site-header">
+	<div class="wrapper-1000">
+		<!-- Section Left -->
+		<section class="left">
+			<!-- Title/Logo -->
+			<div class="title-logo">
+				{{#if @blog.logo}}
+					<div class="logo">
+						<a href="{{@blog.url}}">
+							<img alt="{{@blog.title}}" src="{{@blog.logo}}">
+						</a>
+					</div>
+				{{else}}
+					<div class="about">
+						<div class="title"><a href="/">{{@blog.title}}</a></div>
+						{{#if @blog.description}}<div class="description">{{@blog.description}}</div>{{/if}}
+					</div>
+				{{/if}}
+			</div>
+		</section>
+
+		<!-- Section Right -->
+		<section class="right">
+			{{#if @blog.navigation}}
+				<!-- Navigation -->
+				<div class="navigation">
+					{{navigation}}
+				</div>
+			{{/if}}
+
+			<!-- Search -->
+			<div onclick="toggleSearch()" class="search">
+				{{> "icons/search"}}	
+			</div>
+
+			{{#if @blog.navigation}}
+				<!-- Drawer -->
+				<div class="drawer">
+					<div class="drawer-handle" onclick="openDrawer()">
+						<span class="first"></span>
+						<span class="second"></span>
+					</div>
+				</div>
+			{{/if}}
+		</section>
+	</div>
+</div>

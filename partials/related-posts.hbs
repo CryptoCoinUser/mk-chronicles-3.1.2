@@ -1,0 +1,12 @@
+{{#get "posts" limit="2" filter="id:-{{id}}+tag:{{primary_tag.slug}}" include="tags, authors"}}
+    {{#if posts}}
+        <section class="editors-pick">
+            <header>Related Posts</header>
+            <div class="items">
+                {{#foreach posts}}
+                    {{> "post-card-tiny"}}
+                {{/foreach}}
+            </div>
+        </section>
+    {{/if}}
+{{/get}}

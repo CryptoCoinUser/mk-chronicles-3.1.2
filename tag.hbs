@@ -1,0 +1,52 @@
+{{!< default}} 
+
+{{> "header"}}
+
+{{> "floating-header"}}
+
+<div class="site-content">
+    {{#tag}}
+        <!-- Tag header -->
+        <div class="tag-header {{#if feature_image}}with-cover-image{{/if}}" style="background-image: url({{feature_image}})">
+            <div class="overlay">
+                <div class="wrapper-1000">
+                    <!-- Tag details -->
+                    <div class="tag-details">
+                        <div class="title">{{name}}</div>
+                        <div class="description">
+                            {{description}}
+                            <small>
+                                {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {{/tag}}                            
+
+    <div class="wrapper-1000">
+        <div class="post-feed">
+            <!-- All posts -->
+            {{#foreach posts}}
+                {{> "post-card"}}
+            {{/foreach}}
+        </div>
+
+        <div class="load-more-posts">
+            <button class="button-type-1" onclick="loadMorePosts()">    
+                <div>Load More</div>
+            </button>
+            <div class="lds-ripple"><div></div><div></div></div>
+            <div class="message">Reached End</div>
+        </div>
+    </div>
+</div>
+
+{{> "footer" }}
+
+{{#contentFor "scripts"}}
+    <script type="text/javascript">
+        var current_page = "tag-view";
+    </script>
+{{/contentFor}}

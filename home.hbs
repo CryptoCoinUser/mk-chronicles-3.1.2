@@ -1,0 +1,77 @@
+{{!-- 
+    Home.hbs 
+    This template is used to generate the landing page.
+--}}
+
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<!-- Site Header -->
+{{> "header"}}
+
+<!-- Floating Header -->
+{{> "floating-header"}}
+
+<!-- Site Main Content -->
+<div class="site-content">
+    <div class="wrapper-1000">
+        <div class="post-feed">
+            <!-- First Post -->
+            {{#get "posts" filter="featured:true" limit="1" include="tags, authors" as |featured|}}
+                {{#foreach featured}}
+                    {{> "post-card-large"}}
+                {{/foreach}}
+            {{/get}}
+
+            {{!-- {{> "editors-pick"}} --}}
+
+            <!-- Featured Posts -->
+            {{#get "posts" filter="featured:true" limit="all" include="tags, authors" as |featured|}}
+                {{#foreach featured}}
+                    {{#if @first}}
+                        {{!-- Skip. It's already been displayed. --}}
+                    {{else}}
+                        {{> "post-card"}}
+                    {{/if}}
+                {{/foreach}}
+            {{/get}}
+
+            <!-- Normal posts -->
+            {{#foreach posts}}
+                {{#unless featured}}
+                    {{> "post-card"}}
+                {{/unless}}
+            {{/foreach}}
+        </div>
+
+        <div class="load-more-posts">
+            <button class="button-type-1" onclick="loadMorePosts()">
+                <div>Load More</div>
+            </button>
+            <div class="lds-ripple"><div></div><div></div></div>
+            <div class="message">Reached End</div>
+        </div>
+    </div>
+</div>
+
+<!-- Site Footer -->
+{{> "footer" }}
+
+{{#contentFor "scripts"}}
+<script type="text/javascript">
+    var current_page = "home-view";
+
+    $(document).ready(function(){
+        // Setting up sizes for post cards
+        let cards = document.getElementsByClassName("post-card");
+
+        // Make first post large
+        cards[0].classList.replace("small", "large");
+
+        //Make 2nd and 3rd posts medium sized
+        cards[1].classList.replace("small", "medium");
+        cards[2].classList.replace("small", "medium");        
+    });
+</script>
+{{/contentFor}}

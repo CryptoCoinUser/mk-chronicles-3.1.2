@@ -1,0 +1,119 @@
+{{!< default}}
+
+<!-- Site Header -->
+{{> "header"}}
+
+<div class="site-content">
+    
+    {{#author}}
+    
+    <div style="background-image: url({{cover_image}})" class="author-header {{#if cover_image}}with-cover-image{{/if}}">
+        <div class="overlay">
+            <div class="wrapper-1000">
+                <div class="author-details">
+                    <!-- Profile Image -->
+                    {{#if profile_image}}
+                        <figure class="profile-image" style="background-image: url({{profile_image}})">
+                        </figure>
+                    {{/if}}
+
+                    <section>
+                        <!-- Name -->
+                        <div class="name">{{name}}</div>
+
+                        <!-- Bio -->
+                        <div class="bio">{{bio}}</div>
+
+                        <!-- links -->
+                        <div class="meta">
+                            <!-- Social Media Links -->
+                            <div class="social-links">
+                                {{!-- Twitter --}}
+                                {{#if twitter}}
+                                    <a class="link-with-svg" href="{{twitter_url}}" target="_blank" rel="noopener">
+                                        <span class="link-svg">
+                                            {{> "icons/twitter"}}
+                                        </span>
+                                        <span class="link-text">Twitter</span>
+                                    </a>
+                                {{/if}}
+
+                                {{!-- Facebook --}}
+                                {{#if facebook}}
+                                    <a class="link-with-svg" href="{{facebook_url}}" target="_blank" rel="noopener">
+                                        <span class="link-svg">
+                                            {{> "icons/facebook"}}
+                                        </span>
+                                        <span class="link-text">Facebook</span>
+                                    </a>
+                                {{/if}}
+                                                
+                                {{!-- RSS --}} 
+                                <a class="link-with-svg" href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">
+                                    <span class="link-svg rss">
+                                        {{> "icons/rss"}}
+                                    </span>
+                                    <span class="link-text">RSS</span>
+                                </a>
+                            </div>
+                            
+                            {{!-- Location --}}
+                            {{#if location}}
+                                <div class="separator">
+                                    /
+                                </div>
+                                <div class="location">
+                                    <span class="svg-container">
+                                        {{> "icons/location"}}
+                                    </span>
+                                    <span class="text">
+                                    {{location}}
+                                    </span>
+                                </div>
+                            {{/if}}
+
+                            {{!-- Website --}}      
+                            {{#if website}}
+                                <div class="separator">
+                                    /
+                                </div>
+                                <div class="website">
+                                    <span class="svg-container">
+                                        {{> "icons/link"}}
+                                    </span>
+                                    <span class="text">
+                                        <a class="" href="{{website}}" target="_blank" rel="noopener">{{website}}</a>
+                                    </span>
+                                </div>
+                            {{/if}}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{/author}}
+
+    <!-- All posts -->
+    <div class="wrapper-1000">
+        <div class="post-feed">
+            {{#foreach posts}}
+                {{> "post-card"}}
+            {{/foreach}}
+        </div>
+        <div class="load-more-posts">
+            <button class="button-type-1" onclick="loadMorePosts()">
+                <div>Load More</div>
+            </button>
+            <div class="lds-ripple"><div></div><div></div></div>
+            <div class="message">Reached End</div>
+        </div>
+    </div>
+</div>
+
+{{> "footer"}}
+
+<script type="text/javascript">
+    var current_page = "author-view";
+</script>

@@ -1,0 +1,24 @@
+{{!< default}}
+
+<!-- Site Header -->
+{{> "header"}}
+
+<!-- Floating header -->
+{{> "floating-header"}}
+
+<!-- Site Main Content -->
+<div class="site-content">
+    <div class="wrapper-1000">
+        <div class="post-feed post-feed-infinite-scroll">
+            <!-- Normal posts -->
+            {{#foreach posts}}
+                {{#unless featured}}
+                    {{> "post-card"}}
+                {{/unless}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+<!-- Site Footer -->
+{{> "footer" }}

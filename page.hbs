@@ -1,0 +1,104 @@
+{{!< default}}
+
+{{> "header"}}
+
+{{> "floating-header"}}
+
+{{#post}}
+
+<div class="site-content">
+    <div class="wrapper-1000 wrapper-main">
+        <!-- Main -->
+        <div class="main">
+            <!-- Post Header Section -->
+            <header class="post-header">
+                <div class="post-title">{{title}}</div>
+                {{#if feature_image}}
+                    <div class="feature-image">
+                        <img src="{{feature_image}}">
+                    </div>
+                {{/if}}
+            </header>
+
+            <!-- Post mid section -->
+            <section class="post-content">
+                <!-- Main post content -->
+                <article>
+                    {{content}}
+                </article>
+            </section>
+
+            <!-- Post footer -->
+            <footer class="post-footer">
+                <!-- separator -->
+                <div class="separator">
+                    <hr>
+                </div>
+
+                <!-- post tags -->
+                {{#if tags}}
+                    <div class="post-tags">
+                        <div>Published in</div>
+                        <div class="tags">
+                            {{#foreach tags}}
+                                <a href="{{url}}">{{name}}</a>
+                                <div class="middot">&middot;</div>
+                            {{/foreach}}
+                        </div>
+                    </div>
+                {{/if}}
+
+                <!-- post sharing dialog -->
+                <div class="sharing">
+                    <div class="text">Share</div>
+                    <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+                        {{> "icons/twitter"}}
+                    </a>
+                    <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+                        {{> "icons/facebook"}}
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Aside -->
+        <aside>
+            {{> "editors-pick"}}
+        </aside>
+    </div>
+</div>
+
+{{/post}}
+
+{{> "footer"}}
+
+{{#contentFor "scripts"}}
+<!-- Fitvids -->
+<script type="text/javascript" src="{{asset "built/js/jquery.fitvids.js"}}"></script>
+
+<script>
+    $(document).ready(function(){
+        // Start fitVids
+        var $postContent = $(".post-content article");
+        $postContent.fitVids();
+        // End fitVids
+
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        });
+
+        var tiny_post_cards = document.querySelectorAll('.post-card.tiny .excerpt');
+        for(let i=0; i<tiny_post_cards.length; i++){
+            let excerpt = tiny_post_cards[i];
+            excerpt.style.webkitBoxOrient = "vertical";
+        }
+    });
+</script>
+{{/contentFor}}

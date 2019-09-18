@@ -1,0 +1,12 @@
+{{#get "posts" limit="all" filter="tags:hash-editors-pick" include="tags, authors"}}
+    {{#if posts}}
+        <section class="editors-pick">
+            <header>Editor's Pick</header>
+            <div class="items">
+                {{#foreach posts}}
+                    {{> "post-card-tiny"}}
+                {{/foreach}}
+            </div>
+        </section>
+    {{/if}}
+{{/get}}
