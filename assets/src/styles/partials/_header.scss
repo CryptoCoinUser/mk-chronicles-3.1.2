@@ -296,13 +296,13 @@ img.mkLogo {
     width: 69px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) { // mediumUp
     img.mkLogo {
         width: 94px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { // largeUp
     img.mkLogo {
         width: 134px;
     }
