@@ -1,16 +1,16 @@
-# Chronicles
+# MK-Chronicles
 
 Chronicles, a multipurpose ghost theme, is perfect for building online publications, personal blogs & journals.
 
-*[Demo : http://chronicles.arban.co](http://chronicles.arban.co)* 
+*[Demo : http://chronicles.arban.co](http://chronicles.arban.co)*
 
 
 
 ## Folder Structure
 
-The root directory containes the following files and folders - 
+The root directory containes the following files and folders -
 
-- **assets** 
+- **assets**
   - **src** - It containes the source javascript and scss files, which gets compiled to the `built` directory.
   - **built** - It containes the compiled css and js.
   - **img** - Containes the images.
@@ -18,7 +18,7 @@ The root directory containes the following files and folders -
 - **partials** - This directory contains the partials used in the theme
 - `default.hbs` - The main template file
 - `home.hbs` - The template used on the landing page
-- `index.hbs` - The template used as the index 
+- `index.hbs` - The template used as the index
 - `post.hbs` - Used for individual posts
 - `page.hbs` - Used for individual pages
 - `tag.hbs` - Used for tag archives
@@ -33,7 +33,7 @@ The root directory containes the following files and folders -
 The theme uses gulp and nodejs for the development purposes. You'll need Gulp and Nodejs installed globally. After that from the theme's root directory run the following commands.
 
 ```bash
-$ yarn install 
+$ yarn install
 $ yarn dev
 ```
 
@@ -49,9 +49,9 @@ $ yarn build
 
 ## Adding Posts to Editor's Pick
 
-To add a post in the editors pick section, you need to add the following internal tag to the post - `#editors-pick` 
+To add a post in the editors pick section, you need to add the following internal tag to the post - `#editors-pick`
 
-Note: Editors Pick section will remain invisible if it has no posts. 
+Note: Editors Pick section will remain invisible if it has no posts.
 
 
 
@@ -276,11 +276,11 @@ Social media links are placed at two main components - Footer.hbs & Author.hbs. 
        <span class="link-text">Youtube</span>
    </a>
    ```
-If you need anything else, you may visit https://simpleicons.org/ and download the required icons. 
+If you need anything else, you may visit https://simpleicons.org/ and download the required icons.
 
 
 
-## Feedback and Support 
+## Feedback and Support
 
 **Mail** - stylesheets.dev@gmail.com
 
@@ -291,4 +291,3 @@ If you need anything else, you may visit https://simpleicons.org/ and download t
 ## Copyright & License
 
 copyright (c) 2019 [Stylesheets.dev](https://stylesheets.dev)
-
