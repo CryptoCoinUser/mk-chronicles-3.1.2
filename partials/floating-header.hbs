@@ -1,40 +1,42 @@
 <div class="floating-header">
-	<!-- Section Left -->
-	<section class="left">
-		<!-- Title/Logo -->
-		<div class="title-logo">
-			<div class="about">
-				<div class="title">
-					<a href="/">
-						<img alt="{{@blog.title}}" src="{{@blog.logo}}">
-					</a>
+	<div class="wrapper-1000">
+		<!-- Section Left -->
+		<section class="left">
+			<!-- Title/Logo -->
+			<div class="title-logo">
+				<div class="about">
+					<div class="title">
+						<a href="/">
+							<img alt="{{@blog.title}}" src="{{@blog.logo}}">
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- Section Right -->
-	<section class="right">
-		{{#if @blog.navigation}}
-			<!-- Navigation -->
-			<div class="navigation">
-				{{navigation}}
-			</div>
-		{{/if}}
-
-		<!-- Search -->
-		<div onclick="toggleSearch()" class="search">
-			{{> "icons/search"}}
-		</div>
-
-		{{#if @blog.navigation}}
-			<!-- Drawer -->
-			<div class="drawer">
-				<div class="drawer-handle" onclick="openDrawer()">
-					<span class="first"></span>
-					<span class="second"></span>
+		<!-- Section Right -->
+		<section class="right">
+			{{#if @blog.navigation}}
+				<!-- Navigation -->
+				<div class="navigation">
+					{{navigation}}
 				</div>
+			{{/if}}
+
+			<!-- Search -->
+			<div onclick="toggleSearch()" class="search">
+				{{> "icons/search"}}
 			</div>
-		{{/if}}
-	</section>
+
+			{{#if @blog.navigation}}
+				<!-- Drawer -->
+				<div class="drawer">
+					<div class="drawer-handle" onclick="openDrawer()">
+						<span class="first"></span>
+						<span class="second"></span>
+					</div>
+				</div>
+			{{/if}}
+		</section>
+	</div>
 </div>
