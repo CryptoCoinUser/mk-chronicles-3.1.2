@@ -1,6 +1,6 @@
 <div class="site-footer">
     <div class="wrapper-1000">
-        {{!-- Footer Top. Uncomment to add footer links etc. 
+        {{!-- Footer Top. Uncomment to add footer links etc.
 
         <!-- Footer top section -->
         <div class="footer-top">
@@ -48,20 +48,30 @@
 
             <div class="footer-right">
                 <div class="social-icons">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/mkdecision/" class="" target="_blank">
+                        {{> "icons/instagram"}}
+                    </a>
+
                     {{#if @blog.twitter}}
                         <!-- Twitter -->
                         <a href="{{twitter_url}}" class="" target="_blank">
                             {{> "icons/twitter"}}
                         </a>
                     {{/if}}
-                    
+
                     {{#if @blog.facebook}}
                         <!-- Facebook -->
                         <a href="{{facebook_url}}" class="" target="_blank">
                             {{> "icons/facebook"}}
                         </a>
                     {{/if}}
-                    
+
+                    <!-- Linkedin -->
+                    <a href="https://www.linkedin.com/company/mkdecision/" class="" target="_blank">
+                        {{> "icons/linkedin"}}
+                    </a>
+
                     <!-- RSS -->
                     <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank">
                         {{> "icons/rss"}}
