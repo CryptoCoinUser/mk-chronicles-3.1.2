@@ -157,7 +157,7 @@ hr {
 
 @import "partials/floating-header";
 
-// Post-feed and Post-cards 
+// Post-feed and Post-cards
 // ---------------------------------------------------------
 
 @import "partials/post-cards";
@@ -181,6 +181,12 @@ hr {
 // --------------------------------------------------------
 
 @import "partials/post-page-template";
+
+
+// Sharing
+// --------------------------------------------------------
+
+@import "partials/sharing";
 
 
 // Article
@@ -407,7 +413,7 @@ article {
 
 @import "partials/error-screen";
 
-// Pagination 
+// Pagination
 // ---------------------------------------------------------
 
 .pagination {
@@ -429,7 +435,7 @@ article {
     }
 }
 
-// Search View 
+// Search View
 // ---------------------------------------------------------
 
 @import "partials/search-screen";
@@ -471,4 +477,9 @@ article {
         height: 58px;
         opacity: 0;
     }
+}
+
+.sharing svg {
+    width: 20px;
+    height: 20px;
 }

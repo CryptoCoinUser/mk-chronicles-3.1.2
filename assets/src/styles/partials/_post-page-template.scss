@@ -37,6 +37,14 @@
                 text-align: left;
                 opacity: 0.8;
             }
+            .metaAndSharing {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 1em;
+            }
+
             .post-meta {
                 display: flex;
                 margin: 20px 0 28px;

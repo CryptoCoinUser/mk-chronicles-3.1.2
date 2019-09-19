@@ -13,20 +13,23 @@
             <!-- Post Header Section -->
             <header class="post-header">
                 <div class="post-title">{{title}}</div>
-                <div class="post-meta">
-                    <div class="authors">{{authors separator=" &middot; "}}</div>
-                    <div class="middot">&middot;</div>
-                    <div class="date">
-                        <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                <div class="metaAndSharing">
+                    <div class="post-meta">
+                        <div class="authors">{{authors separator=" &middot; "}}</div>
+                        <div class="middot">&middot;</div>
+                        <div class="date">
+                            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                        </div>
+                        {{#if primary_tag}}
+                        <div class="middot">&middot;</div>
+                        <div class="tag">
+                            {{#primary_tag}}
+                                <a href="{{url}}">{{name}}</a>
+                            {{/primary_tag}}
+                        </div>
+                        {{/if}}
                     </div>
-                    {{#if primary_tag}}
-                    <div class="middot">&middot;</div>
-                    <div class="tag">
-                        {{#primary_tag}}
-                            <a href="{{url}}">{{name}}</a>
-                        {{/primary_tag}}
-                    </div>
-                    {{/if}}
+                    {{> "sharing"}}
                 </div>
                 {{#if feature_image}}
                     <div class="feature-image">
@@ -63,18 +66,7 @@
                     </div>
                 {{/if}}
 
-                <!-- post sharing dialog -->
-                <div class="sharing">
-                    <div class="text">Share</div>
-                    <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                        onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
-                        {{> "icons/twitter"}}
-                    </a>
-                    <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                        onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
-                        {{> "icons/facebook"}}
-                    </a>
-                </div>
+
             </footer>
         </div>
 
