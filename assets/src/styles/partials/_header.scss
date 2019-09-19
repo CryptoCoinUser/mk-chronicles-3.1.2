@@ -79,7 +79,7 @@
         // Drawer
         div.drawer {
             display: none;
-            margin-top: 15px;
+            margin-top: 10px;
             padding: 0px 5px;
             margin-left: 10px;
         }
@@ -136,83 +136,70 @@
 
 /* Drawer */
 .drawer-handle {
-    position: relative;
-    z-index: 501;
-    width: 30px;
-    height: 35px;
-    cursor: pointer;
-    opacity: 0.78;
-    span {
-        position: absolute;
-        cursor: pointer;
-        height: 1px;
-        width: 30px;
-        background: $color-text;
-        position: absolute;
-        display: block;
-        content: "";
-        top: 0px;
+    // position: relative;
+    // z-index: 501;
+    // width: 30px;
+    // height: 35px;
+    // cursor: pointer;
+    // opacity: 0.78;
 
-        &:before,
-        &:after {
-            cursor: pointer;
-            height: 1px;
-            width: 30px;
-            background: $color-text;
-            position: absolute;
-            display: block;
-            content: "";
-            top: 0px;
-        }
-    }
+    display: block;
+	width: 36px;
+	height: 36px;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+    z-index: 11;
 
-    span.second {
-        top: 7px;
-        // opacity: 0.78;
-    }
-
-    span {
-        -webkit-transition: all 0.2s ease;
-        -moz-transition: all 0.2s ease;
-        -ms-transition: all 0.2s ease;
-        -o-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-
-        &:after {
-            -webkit-transition: all 0.2s ease;
-            -moz-transition: all 0.2s ease;
-            -ms-transition: all 0.2s ease;
-            -o-transition: all 0.2s ease;
-            transition: all 0.2s ease;
-            top: 14px;
-        }
-
-        &:before {
-            -webkit-transition: all 0.2s ease;
-            -moz-transition: all 0.2s ease;
-            -ms-transition: all 0.2s ease;
-            -o-transition: all 0.2s ease;
-            transition: all 0.2s ease;
-            top: 7px;
-        }
-    }
+    .bar {
+		background: black;
+		border-radius: 1.5px;
+		display: block;
+		height: 3px;
+		right: 0;
+		opacity: 1;
+		position: absolute;
+		transform: rotate(0deg);
+		width: 24px;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+	}
+	.bar.first {
+		top: 6px;
+	}
+	.bar.second {
+		top: 15px;
+		opacity: 1;
+        transition: opacity 0.4s;
+        -webkit-transition: opacity 0.4s;
+        -moz-transition: opacity 0.4s;
+        -ms-transition: opacity 0.4s;
+        -o-transition: opacity 0.4s;
+	}
+	.bar.small {
+		top: 24px;
+		width: 16px;
+		right: 0;
+	}
 }
 
 .drawer-handle.open {
-    span {
-        transform: rotate(45deg);
-        top: 10px;
-        background: $color-text;
-
-        &:before {
-            background-color: transparent;
-        }
-
-        &:after {
-            background: $color-text;
-            transform: rotate(90deg);
-            top: 0px;
-        }
+    .bar:nth-child(1) {
+        top: 17px;
+        right: 0;
+        transform: rotate(135deg);
+    }
+    .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .bar.small {
+        top: 17px;
+        transform: rotate(-135deg);
+        width: 24px;
+        right: 0;
     }
 }
 
