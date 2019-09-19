@@ -26,6 +26,25 @@
                 <article>
                     {{content}}
                 </article>
+                <!-- tag list -->
+                {{#get "tags" limit="all"}}
+                    <ul class="tags">
+                        {{!-- {{#foreach tags}}
+                            <li>
+                                <a href="{{url}}">{{name}}</a>
+                            </li>
+                        {{/foreach}} --}}
+
+                        {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+                            {{#foreach tags}}
+                                {{!-- The tag below includes the markup for each tag - partials/tag-card.hbs --}}
+                                {{> "tag-card"}}
+                            {{/foreach}}
+                        {{/get}}
+                    </ul>
+                {{/get}}
+                <!-- end tag list-->
+
             </section>
 
             <!-- Post footer -->
