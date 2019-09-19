@@ -110,13 +110,15 @@
     margin: -15px;
     .large {
         width: 100%;
-        min-height: 500px;
+        // min-height: 500px;
+        // max-height: 200px;
+
         .post-card-wrapper {
             display: flex;
             flex-wrap: wrap;
         }
         a.image-container-link {
-            width: 60%;
+            width: calc(50% - 15px);
             height: 100%;
         }
         .post-card-image {
