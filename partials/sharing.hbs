@@ -1,16 +1,25 @@
 <!-- post sharing dialog -->
 <div class="sharing">
 	<div class="text">Share</div>
-	<a class="floating-header-share-li" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}"
-		onclick="window.open(this.href, 'share-linkedin','width=580,height=296');return false;">
+	<a class="floating-header-share-li"
+		href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}"
+		onclick="window.open(this.href, 'share-linkedin','width=580,height=296');return false;"
+		title="share on LinkedIn"
+	>
 		{{> "icons/linkedin"}}
 		</a>
-	<a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-		onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+	<a class="floating-header-share-tw"
+		href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+		onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;"
+		title="share on Twitter"
+	>
 		{{> "icons/twitter"}}
 	</a>
-	<a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-		onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+	<a class="floating-header-share-fb"
+		href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+		onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;"
+		title="share on Facebook"
+	>
 		{{> "icons/facebook"}}
 	</a>
 </div>
