@@ -53,19 +53,20 @@ img {
 
 .wrapper-1000 {
     width: 100%;
-    max-width: 1250px;
+    max-width: 1366px;
+    padding: 0 7%;
     margin: 0 auto;
 }
 
 @media (max-width: 1250px) {
     .wrapper-1000 {
-        padding: 0 20px;
+        // padding: 0 20px;
     }
 }
 
 @media (max-width: 600px) {
     .wrapper-1000 {
-        padding: 0 15px;
+        // padding: 0 15px;
     }
 }
 
