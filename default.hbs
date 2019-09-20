@@ -14,6 +14,10 @@
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/css/normalize.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "built/css/main.css"}}" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap" rel="stylesheet">
+
+
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
@@ -25,7 +29,7 @@
 <body class="{{body_class}}">
 
     {{{body}}}
-    
+
     <!-- Slide in drawer menu -->
     <div class="drawer-menu" class="pull-left">
         {{navigation}}
@@ -55,11 +59,11 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
-    
+
     <script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
-    
+
     <script src="{{asset "built/js/main.js"}}"></script>
-    
+
     <script>
         var ghosthunter_key = ''; // ADD YOUR CONTENT API KEY
         $("#search-field").ghostHunter({
