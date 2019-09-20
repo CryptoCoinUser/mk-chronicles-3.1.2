@@ -16,7 +16,7 @@
 }
 
 html {
-    font-family: $lato;
+    font-family: $opensans;
     color: $color-text;
     margin: 0 auto;
     overflow-x: hidden;
@@ -37,14 +37,14 @@ a {
 
 input,
 textarea {
-    font-family: $lato;
+    font-family: $opensans;
     outline: none;
 }
 
 button {
     outline: none;
     cursor: pointer;
-    font-family: $lato;
+    font-family: $opensans;
 }
 
 img {
