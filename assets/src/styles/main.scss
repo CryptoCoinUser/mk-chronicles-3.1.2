@@ -262,6 +262,11 @@ article {
         padding: 3px;
         border-radius: 3px;
     }
+
+    q {
+        font-style: italic;
+    }
+
     blockquote {
         margin: 30px auto;
         color: $color-text;
