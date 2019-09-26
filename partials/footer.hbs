@@ -55,14 +55,14 @@
             <div class="footer-right">
                 <div class="social-icons">
                     <!-- Instagram -->
-                    <a href="https://www.instagram.com/mkdecision/" class="" target="_blank"
+                    <a href="https://www.instagram.com/mkdecision/" target="_blank"
                     title="MK's Instagram page">
                         {{> "icons/instagram"}}
                     </a>
 
                     {{#if @blog.twitter}}
                         <!-- Twitter -->
-                        <a href="{{twitter_url}}" class="" target="_blank"
+                        <a href="{{twitter_url}}" target="_blank"
                         title="MK's Twitter page">
                             {{> "icons/twitter"}}
                         </a>
@@ -70,16 +70,22 @@
 
                     {{#if @blog.facebook}}
                         <!-- Facebook -->
-                        <a href="{{facebook_url}}" class="" target="_blank"
+                        <a href="{{facebook_url}}" target="_blank"
                     title="MK's Facebook page">
                             {{> "icons/facebook"}}
                         </a>
                     {{/if}}
 
                     <!-- Linkedin -->
-                    <a href="https://www.linkedin.com/company/mkdecision/" class="" target="_blank"
+                    <a href="https://www.linkedin.com/company/mkdecision/" target="_blank"
                     title="MK's LinkedIn page">
                         {{> "icons/linkedin"}}
+                    </a>
+
+                    <!-- Glassdoor -->
+                    <a href="https://www.glassdoor.com/Overview/Working-at-MK-Decision-EI_IE1864890.11,22.htm" target="_blank"
+                    title="MK's Glassdoor page">
+                        {{> "icons/glassdoor"}}
                     </a>
 
                     <!-- RSS -->
