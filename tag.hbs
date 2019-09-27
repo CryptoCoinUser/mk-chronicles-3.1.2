@@ -1,4 +1,4 @@
-{{!< default}} 
+{{!< default}}
 
 {{> "header"}}
 
@@ -7,9 +7,9 @@
 <div class="site-content">
     {{#tag}}
         <!-- Tag header -->
-        <div class="tag-header {{#if feature_image}}with-cover-image{{/if}}" style="background-image: url({{feature_image}})">
+        <div class="tag-header">
             <div class="overlay">
-                <div class="wrapper-1000">
+                <div class="wrapper-1000" {{#if feature_image}}with-cover-image{{/if}}" style="background-image: url({{feature_image}})">
                     <!-- Tag details -->
                     <div class="tag-details">
                         <div class="title">{{name}}</div>
@@ -21,9 +21,9 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
-    {{/tag}}                            
+    {{/tag}}
 
     <div class="wrapper-1000">
         <div class="post-feed">
@@ -34,7 +34,7 @@
         </div>
 
         <div class="load-more-posts">
-            <button class="button-type-1" onclick="loadMorePosts()">    
+            <button class="button-type-1" onclick="loadMorePosts()">
                 <div>Load More</div>
             </button>
             <div class="lds-ripple"><div></div><div></div></div>
