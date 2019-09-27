@@ -66,11 +66,15 @@
         align-items: center;
         // border-top: 2px solid #cfd4dd;
         padding-top: 30px;
+        flex-wrap: wrap;
+
         .footer-right {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+
             .social-icons {
+                padding-top: 1em;
                 display: flex;
                 justify-content: space-between;
                 min-width: 250px;
@@ -80,7 +84,7 @@
                     display: block;
                     color: $color-footer-text;
                     margin-top: 5px;
-                    margin-left: 8px;
+                    margin-right: 8px;
                     opacity: 0.8;
                     svg {
                         fill: $color-footer-text;
