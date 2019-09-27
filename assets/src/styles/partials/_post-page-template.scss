@@ -7,6 +7,11 @@
         width: 66.66%;
         padding-right: 30px;
     }
+
+    .site-content .main.full-width {
+        width: 100%;
+        padding-right: 0;
+    }
     .site-content aside {
         width: 33.33%;
     }
@@ -71,6 +76,11 @@
                     }
                 }
             }
+        }
+
+        ul.tags {
+           padding-left: 0;
+           padding-inline-start: 0;
         }
 
         // Post footer
