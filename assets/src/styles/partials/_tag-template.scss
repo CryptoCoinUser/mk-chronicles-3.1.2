@@ -10,7 +10,14 @@
         background: transparent no-repeat center center;
         background-size: cover;
         .overlay {
-            padding: 50px 0;
+            margin: 0 0 50px 0;
+            background: #ccc;
+
+            .wrapper-1000 {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                background-position: center center;
+            }
         }
         &.with-cover-image {
             margin-top: -2px;
@@ -23,6 +30,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
             .tag-details {
                 .title {
                     opacity: 1;
@@ -74,6 +82,15 @@
                 max-width: none;
             }
         }
+    }
+}
+
+.tag-template.tag-people-spotlight .tag-header .overlay {
+    background-color: #8d4ab4;
+    color: white;
+
+    .wrapper-1000 {
+        min-height: 300px;
     }
 }
 
