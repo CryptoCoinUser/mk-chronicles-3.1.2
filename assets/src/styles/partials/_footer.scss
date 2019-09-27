@@ -68,6 +68,12 @@
         padding-top: 30px;
         flex-wrap: wrap;
 
+        address {
+            font-style: normal;
+            margin-bottom: 1em;
+            line-height: 1.5;
+        }
+
         .footer-right {
             display: flex;
             flex-direction: column;
