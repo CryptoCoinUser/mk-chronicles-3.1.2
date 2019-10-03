@@ -83,6 +83,20 @@
            padding-inline-start: 0;
         }
 
+        h2#contact-sales {
+            a {
+                background: black;
+                color: white;
+                display: inline-block;
+                padding: 1em 3em;
+                font-size: 21px;
+
+                &:hover {
+                    background: #02aeb8;
+                }
+            }
+        }
+
         // Post footer
         .post-footer {
             .separator {
