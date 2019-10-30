@@ -221,16 +221,24 @@
 
 body.page-tags {
 
+    div.feature-image {
+        max-height: 250px;
+        overflow: hidden;
+    }
+
     article.post-card.no-image {
         max-width: 200px;
         min-width: 200px;
         margin-right: 50px;
-
         float: left;
 
-        .post-card-content {
-            min-height: 150px;
+        @media (min-width: 600px) {
+            .post-card-content {
+                min-height: 150px;
+            }
+
         }
+
     }
 
 }
