@@ -218,3 +218,19 @@
         }
     }
 }
+
+body.page-tags {
+
+    article.post-card.no-image {
+        max-width: 200px;
+        min-width: 200px;
+        margin-right: 50px;
+
+        float: left;
+
+        .post-card-content {
+            min-height: 150px;
+        }
+    }
+
+}
