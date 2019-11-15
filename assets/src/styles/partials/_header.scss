@@ -272,10 +272,6 @@ img.mkLogo {
 li.nav-contact-sales {
     margin-left: 15px;
 
-    @media (min-width: 992px) { // mediumUp
-        margin-left: 30%;
-    }
-
     a {
         padding: 0;
         display: block;
@@ -286,7 +282,14 @@ li.nav-contact-sales {
         text-align: center;
 
         &:hover {
-            background: #0092b4;
+            background: $color-primary;
         }
+    }
+}
+
+
+@media (min-width: 1100px) {
+    li.nav-contact-sales {
+        margin-left: 25%;
     }
 }
