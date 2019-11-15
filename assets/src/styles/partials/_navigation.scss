@@ -6,10 +6,11 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: flex-end;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
 		li {
 			display: inline-block;
 			a {
+				line-height: 47px;
 				display: inline-block;
 				padding: 2px 0px;
 				color: $color-text;

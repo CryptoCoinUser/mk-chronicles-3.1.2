@@ -268,3 +268,25 @@ img.mkLogo {
         width: 134px;
     }
 }
+
+li.nav-contact-sales {
+    margin-left: 15px;
+
+    @media (min-width: 992px) { // mediumUp
+        margin-left: 30%;
+    }
+
+    a {
+        padding: 0;
+        display: block;
+        background: black;
+        color: white !important;
+        line-height: 47px;
+        width: 200px;
+        text-align: center;
+
+        &:hover {
+            background: #0092b4;
+        }
+    }
+}
