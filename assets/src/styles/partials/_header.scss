@@ -271,6 +271,7 @@ img.mkLogo {
 
 li.nav-contact-sales {
     margin-left: 15px;
+    margin-top: 15px;
 
     a {
         padding: 0;
@@ -284,6 +285,12 @@ li.nav-contact-sales {
         &:hover {
             background: $color-primary;
         }
+    }
+}
+
+@media (min-width: 901px) {
+    li.nav-contact-sales {
+        margin-top: 0;
     }
 }
 
