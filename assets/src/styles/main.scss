@@ -198,26 +198,35 @@ hr {
 
 // Article
 // -------------------------------------------------------
+q {
+    font-style: italic;
+}
+
 article {
+
+    q {
+        font-style: italic;
+    }
+
     p {
         font-size: 18px;
         line-height: 32px;
         margin-bottom: 30px;
         font-family: $font-primary;
-        opacity: 0.85;
+        color: #262626;
     }
     h1 {
         font-family: $font-primary;
         font-size: 27px;
         font-weight: 700;
         line-height: 35px;
-        opacity: 0.85;
+        color: #262626;
     }
     h2 {
         font-family: $font-primary;
         font-size: 23px;
         font-weight: 700;
-        opacity: 0.85;
+        color: #262626;
     }
     h3,
     h4,
@@ -226,14 +235,14 @@ article {
         font-family: $font-primary;
         font-size: 18px;
         font-weight: 700;
-        opacity: 0.85;
+        color: #262626;
     }
     ul {
         margin: 30px auto;
         list-style: outside none disclosure-closed;
         padding: 0px 0px 0px 18px;
         font-family: $font-primary;
-        opacity: 0.85;
+        color: #262626;
         li {
             margin-bottom: 15px;
             line-height: 30px;
@@ -245,7 +254,7 @@ article {
         list-style: outside none inherit;
         padding: 0px 0px 0px 18px;
         font-family: $font-primary;
-        opacity: 0.85;
+        color: #262626;
         li {
             margin-bottom: 15px;
             line-height: 30px;
@@ -261,10 +270,6 @@ article {
         background: $hightlight;
         padding: 3px;
         border-radius: 3px;
-    }
-
-    q {
-        font-style: italic;
     }
 
     blockquote {
